@@ -1,0 +1,73 @@
+.hero{
+    margin: 60px auto 80px;
+    max-width:fit-content;
+    position: relative;
+}
+.herotext{
+    font-family: 'Allura', cursive;
+    font-size: 90px;
+}
+.subherotext{
+    
+    font-family: 'Fauna One', serif;
+    
+    position: absolute;
+    left: 56px  
+}
+
+
+
+.skoleoppgaver{
+    
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: relative; 
+}
+
+.sircle{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+    outline: 1px black solid;
+    box-shadow: 5px 10px 10px grey;
+}
+
+#LÆKAG{
+    position: absolute;
+    top: -35px;
+    left: -30px;
+    z-index: 2;
+}#Getaway{
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    z-index: 3;
+}#MF{
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    z-index: 1;
+}
+.oppgave {
+
+    
+    padding: 24px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    gap: 24px;
+    margin: 24px 0;
+    
+
+    
+}
+
+.oppgave img{
+    width: 100%;
+    padding: 24px 0;
+}
+
+.oppgave a{
+    display: block;
+}

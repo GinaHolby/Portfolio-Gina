@@ -45,6 +45,19 @@ export default {
       type: "string",
     },
     {
+      name: "problemIntroduction",
+      title: "Introduction of the Problem",
+      type: "array",
+      of: [
+        {
+          title: "HiHi",
+          name: "hehe",
+          type: "object",
+          fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
+        },
+      ],
+    },
+    {
       name: "problemDescription",
       title: "Description of the Problem",
       type: "array",
@@ -57,34 +70,38 @@ export default {
         },
       ],
     },
-    /* {
-      name: "problemDescriptionn",
-      title: "Description of the Problem",
-      type: "blockContent",
-    }, */
-    //* Key Findings
-    {
-      name: "keyFindings",
-      title: "Key Findings",
-      type: "array",
-      of: [{ type: "keyFinding" }],
-    },
-    /* //* SOLUTIONS
+    
+    //* SOLUTION
       {
         name: "solutionTitle",
         title: "Solutions Title",
         type: "string",
       },
       {
-        name: "solutionDescription",
-        title: "Description of the Solution",
-        type: "blockContent",
+        name: "solutionIntroduction",
+        title: "Introduction of the Solution",
+        type: "array",
+        of: [
+          {
+            title: "HiHi",
+            name: "hehe",
+            type: "object",
+            fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
+          },
+        ],
       },
       {
-        name: "solutions",
-        title: "Solutions",
+        name: "solutionDescription",
+        title: "Description of the Solution",
         type: "array",
-        of: [{ type: "solution" }],
+        of: [
+          {
+            title: "HiHi",
+            name: "hehe",
+            type: "object",
+            fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
+          },
+        ],
       },
       //*TODO legge inn en link til figam fil og prototype
       //*TODO Design process Dubble Dimond
@@ -94,7 +111,7 @@ export default {
         name: "reflectionTitle",
         title: "Reflection Title",
         type: "string",
-      }, */
+      }, 
   ],
   preview: {
     select: {

@@ -2,6 +2,7 @@ import handleHamburger from './menu.js';
 import { readUrl } from './utils.js';
 import { sanityUrl } from './env.js';
 import { handleParagraphs } from './utils.js';
+import { handleParagraphss } from './utils.js';
 
 handleHamburger(); // invoke the hamburger menu handling
 
@@ -22,12 +23,19 @@ const queryAllProjects = `
 const querySingleProject = `
   *[slug.current == "${urlString}"]{
     title,
-    "cover": cover.asset->url,
+    "cover": image.asset->url,
     process,
     projectTitle,
     shortProjectDescription,
+
     problemTitle,
-    problemDescription
+    problemIntroduction,
+    problemDescription,
+
+    solutionTitle,
+    solutionIntroduction,
+    solutionDescription,
+
   }
 `;
 // end of queries to sanity
@@ -44,9 +52,30 @@ function renderSingleProject(result) {
   titleEl.textContent = result[0].title;
   const coverProjectEl = document.querySelector('.project__cover');
   coverProjectEl.setAttribute('src', result[0].hero_image);
-  
-  handleParagraphs(result[0].problemDescription, 'sanityProblemDescription');
-  handleParagraphs(result[0].problemDescriptionn, 'sanityProblemDescription');
+
+  //* HERO:
+
+      const sanityProjectTitle = document.querySelector('.sanityProjectTitle');
+      sanityProjectTitle.textContent = result[0].projectTitle
+
+      const sanityShortProjectDescription = document.querySelector('.sanityShortProjectDescription');
+      sanityShortProjectDescription.textContent = result[0].shortProjectDescription
+
+   //* PROBLEM:
+
+      const sanityProblemTitle = document.querySelector('.sanityProblemTitle');
+      sanityProblemTitle.textContent = result[0].problemTitle
+
+      handleParagraphss(result[0].problemIntroduction, 'sanityProblemIntroduction');
+      handleParagraphs(result[0].problemDescription, 'sanityProblemDescription');
+
+  //* SOLUTION:
+
+      const sanitySolutionTitle = document.querySelector('.sanitySolutionTitle');
+      sanitySolutionTitle.textContent = result[0].solutionTitle
+
+      handleParagraphss(result[0].solutionIntroduction, 'sanitySolutionIntroduction');
+      handleParagraphs(result[0].solutionDescription, 'sanitySolutionDescription');
 }
 
 if(urlString !== undefined) {

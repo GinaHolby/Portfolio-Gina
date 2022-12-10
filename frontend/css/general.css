@@ -1,0 +1,26 @@
+html, body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-size: 20px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.skip-to {
+   position: absolute; 
+   z-index: 10;
+   transform: translateY(-100px);
+   padding: 0.5rem;
+   background-color: #666;
+   color: #fff;
+}
+
+.skip-to:focus {
+    transform: translateY(0px);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Dancing+Script:wght@700&family=Fauna+One&family=Mochiy+Pop+P+One&family=Quicksand:wght@300;700&display=swap');
+a{
+    text-decoration:none; 
+    color: black;
+}
