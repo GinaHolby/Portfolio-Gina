@@ -15,7 +15,7 @@ const queryAllProjects = `
     title,
     _id,
     slug,
-    "bilde": cover.asset->url,
+    "bilde": image.asset->url,
     gallery[]
   }
 `;
