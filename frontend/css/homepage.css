@@ -1,6 +1,16 @@
+.homepage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+}
+
 .hero{
-    margin: 60px auto 80px;
-    max-width:fit-content;
     position: relative;
 }
 .herotext{
@@ -8,49 +18,100 @@
     font-size: 90px;
 }
 .subherotext{
-    
     font-family: 'Fauna One', serif;
-    
     position: absolute;
-    left: 56px  
+    left: 56px;
+    top: 80px
 }
+
 
 
 
 .skoleoppgaver{
     
     width: 100px;
-    height: 100px;
+    height: 250px;
     margin: auto;
     position: relative; 
+    top: 80px;
 }
 
-.sircle{
-    width: 200px;
-    height: 200px;
+.circle{
+    
     object-fit: cover;
     border-radius: 100%;
-    outline: 1px black solid;
     box-shadow: 5px 10px 10px grey;
 }
 
-#LÆKAG{
+.disko{
     position: absolute;
     top: -35px;
-    left: -30px;
-    z-index: 2;
-}#Getaway{
+    left: -45px;
+    z-index: 4;
+    width: 220px;
+    height: 220px;
+}.nasjonalmuseet{
     position: absolute;
-    top: 120px;
+    top: 110px;
     left: 80px;
     z-index: 3;
-}#MF{
+    width: 200px;
+    height: 200px;
+}.getaway{
     position: absolute;
     top: 70px;
     right: 80px;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+}.laekag{
+    position: absolute;
+    top: 20px;
+    right: 250px;
     z-index: 1;
+    width: 150px;
+    height: 150px;
+}.nor-ways{
+    position: absolute;
+    top: 40px;
+    right: -280px;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
 }
-.oppgave {
+
+
+
+.hemi {
+    width: 5rem;
+
+}
+
+.arrow {
+    position:absolute;
+    bottom: 0px;
+    left: auto;
+
+    width: 5rem;
+    animation-name: bounceArrow;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounceArrow {
+    from {
+        transform: translateY(0px);
+    }
+    60% {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* .oppgave {
 
     
     padding: 24px;
@@ -66,8 +127,9 @@
 .oppgave img{
     width: 100%;
     padding: 24px 0;
-}
+} */
 
 .oppgave a{
     display: block;
 }
+
