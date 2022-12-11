@@ -57,9 +57,36 @@ export default {
         },
       ],
     },
+    
     {
+      name: "problemDescriptions",
+      title: "Description of the Problem!!!",
+      type: "array",
+      of: [{ type: "problemmDescription" }],
+    },
+    /* {
       name: "problemDescription",
       title: "Description of the Problem",
+      type: "array",
+      of: [
+        {
+          title: "HiHi",
+          name: "hehe",
+          type: "object",
+          fields: [{ name: "tmp", title: "beskrivelse", type: "blockContent" }],
+        },
+      ],
+    },*/
+
+    //* SOLUTION
+    {
+      name: "solutionTitle",
+      title: "Solutions Title",
+      type: "string",
+    },
+    {
+      name: "solutionIntroduction",
+      title: "Introduction of the Solution",
       type: "array",
       of: [
         {
@@ -70,52 +97,32 @@ export default {
         },
       ],
     },
-    
-    //* SOLUTION
-      {
-        name: "solutionTitle",
-        title: "Solutions Title",
-        type: "string",
-      },
-      {
-        name: "solutionIntroduction",
-        title: "Introduction of the Solution",
-        type: "array",
-        of: [
-          {
-            title: "HiHi",
-            name: "hehe",
-            type: "object",
-            fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
-          },
-        ],
-      },
-      {
-        name: "solutionDescription",
-        title: "Description of the Solution",
-        type: "array",
-        of: [
-          {
-            title: "HiHi",
-            name: "hehe",
-            type: "object",
-            fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
-          },
-        ],
-      },
-      //*TODO legge inn en link til figam fil og prototype
-      //*TODO Design process Dubble Dimond
-      //TODO Results
-      //* REFLECTIONS
-      {
-        name: "reflectionTitle",
-        title: "Reflection Title",
-        type: "string",
-      }, 
+    {
+      name: "solutionDescription",
+      title: "Description of the Solution",
+      type: "array",
+      of: [
+        {
+          title: "HiHi",
+          name: "hehe",
+          type: "object",
+          fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
+        },
+      ],
+    },
+    //*TODO legge inn en link til figam fil og prototype
+    //*TODO Design process Dubble Dimond
+    //TODO Results
+    //* REFLECTIONS
+    {
+      name: "reflectionTitle",
+      title: "Reflection Title",
+      type: "string",
+    },
   ],
   preview: {
     select: {
-      title: "name",
+      title: "projectTitle",
       media: "image",
     },
   },

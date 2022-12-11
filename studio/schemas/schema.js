@@ -15,6 +15,7 @@ import cv from './cv'
 import project from './project'
 import software from './software'
 import keyFinding from './project/keyFinding'
+import problemmDescription from './project/problemDescription'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -33,6 +34,7 @@ export default createSchema({
     project,
     software,
     keyFinding,
+    problemmDescription,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
