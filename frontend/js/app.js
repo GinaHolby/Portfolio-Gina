@@ -12,7 +12,7 @@ const urlString = readUrl();
 // querystring for sanity
 const queryAllProjects = `
 *[_type == "project"]{
-    title,
+    projectTitle,
     _id,
     slug,
     "bilde": image.asset->url,
@@ -48,10 +48,6 @@ async function getProject() {
 }
 
 function renderSingleProject(result) {
-  const titleEl = document.querySelector('.single-project__title');
-  titleEl.textContent = result[0].title;
-  const coverProjectEl = document.querySelector('.project__cover');
-  coverProjectEl.setAttribute('src', result[0].hero_image);
 
   //* HERO:
 
@@ -92,7 +88,7 @@ async function getAllProjects() {
 }
 
 function renderProjectsList(result) {
-    const projectsEl = document.querySelector('.projects-wrapper');
+    const projectsEl = document.querySelector('.skoleoppgaver');
     
     result.forEach(project => {
     const cardEl = document.createElement('a');
@@ -100,11 +96,13 @@ function renderProjectsList(result) {
     cardEl.setAttribute('href', `/projects/?${project.slug.current}`);
     const coverEl = document.createElement('img');
     coverEl.setAttribute('src', project.bilde);
-    const titleEl = document.createElement('h4');
-    titleEl.textContent = project.title;
+    /* const titleEl = document.createElement('h4');
+    titleEl.textContent = project.projectTitle; */
     cardEl.append(coverEl);
-    cardEl.append(titleEl);
+    /* cardEl.append(titleEl); */
     projectsEl.append(cardEl);
+    coverEl.classList.add(`${project.slug.current}`)
+    coverEl.classList.add('circle')
   })
 }
 
