@@ -1,6 +1,6 @@
 export default {
-  name: "problemmDescription",
-  title: "problem Descriptions",
+  name: "arrayContent",
+  title: "Content",
   type: "object",
   fields: [
     {

@@ -2,7 +2,6 @@ import handleHamburger from './menu.js';
 import { readUrl } from './utils.js';
 import { sanityUrl } from './env.js';
 import { handleParagraphs } from './utils.js';
-import { handleParagraphss } from './utils.js';
 
 handleHamburger(); // invoke the hamburger menu handling
 
@@ -30,7 +29,8 @@ const querySingleProject = `
 
     problemTitle,
     problemIntroduction,
-    problemDescription,
+    problemDescriptions,
+    numberOfColumns,
 
     solutionTitle,
     solutionIntroduction,
@@ -57,20 +57,23 @@ function renderSingleProject(result) {
       const sanityShortProjectDescription = document.querySelector('.sanityShortProjectDescription');
       sanityShortProjectDescription.textContent = result[0].shortProjectDescription
 
+
    //* PROBLEM:
 
       const sanityProblemTitle = document.querySelector('.sanityProblemTitle');
       sanityProblemTitle.textContent = result[0].problemTitle
 
-      handleParagraphss(result[0].problemIntroduction, 'sanityProblemIntroduction');
-      handleParagraphs(result[0].problemDescription, 'sanityProblemDescription');
-
+      handleParagraphs(result[0].problemIntroduction, 'sanityProblemIntroduction');
+      handleParagraphs(result[0].problemDescriptions, 'sanityProblemDescription');
+      const sanityProblemDescription = document.querySelector('#sanityProblemDescription')
+      sanityProblemDescription.classList.add(result[0].numberOfColumns)
+      //
   //* SOLUTION:
 
       const sanitySolutionTitle = document.querySelector('.sanitySolutionTitle');
       sanitySolutionTitle.textContent = result[0].solutionTitle
 
-      handleParagraphss(result[0].solutionIntroduction, 'sanitySolutionIntroduction');
+      handleParagraphs(result[0].solutionIntroduction, 'sanitySolutionIntroduction');
       handleParagraphs(result[0].solutionDescription, 'sanitySolutionDescription');
 }
 

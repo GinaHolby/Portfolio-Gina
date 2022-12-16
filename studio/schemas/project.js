@@ -14,6 +14,12 @@ export default {
       type: "string",
     },
     {
+      name: "projectColor1",
+      title: "Project Color 1",
+      type: "string",
+    },
+
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -48,21 +54,19 @@ export default {
       name: "problemIntroduction",
       title: "Introduction of the Problem",
       type: "array",
-      of: [
-        {
-          title: "HiHi",
-          name: "hehe",
-          type: "object",
-          fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
-        },
-      ],
+      of: [{ type: "arrayContent" }],
     },
-    
+
     {
       name: "problemDescriptions",
       title: "Description of the Problem!!!",
       type: "array",
-      of: [{ type: "problemmDescription" }],
+      of: [{ type: "arrayContent" }],
+    },
+    {
+      name: "numberOfColumns",
+      title: "number of columns",
+      type: "string",
     },
     /* {
       name: "problemDescription",
@@ -88,27 +92,13 @@ export default {
       name: "solutionIntroduction",
       title: "Introduction of the Solution",
       type: "array",
-      of: [
-        {
-          title: "HiHi",
-          name: "hehe",
-          type: "object",
-          fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
-        },
-      ],
+      of: [{ type: "arrayContent" }],
     },
     {
       name: "solutionDescription",
       title: "Description of the Solution",
       type: "array",
-      of: [
-        {
-          title: "HiHi",
-          name: "hehe",
-          type: "object",
-          fields: [{ name: "tmp", title: "tittel", type: "blockContent" }],
-        },
-      ],
+      of: [{ type: "arrayContent" }],
     },
     //*TODO legge inn en link til figam fil og prototype
     //*TODO Design process Dubble Dimond
